@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto11 # Use the desired Java version
+      java: corretto17 # Use the desired Java version
   pre_build:
     commands:
       # Optionally, you might run commands before building the project
@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - echo "Building Spring Boot application..."
-      - mvn clean install # Use Maven or Gradle commands to build your Spring Boot app
+      - mvn clean install -X # Use Maven or Gradle commands to build your Spring Boot app
   post_build:
     commands:
       - echo "Build completed!"
