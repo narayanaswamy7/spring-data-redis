@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto8 # Use the desired Java version
+      java: corretto17 # Use the desired Java version
   pre_build:
     commands:
       # Optionally, you might run commands before building the project
