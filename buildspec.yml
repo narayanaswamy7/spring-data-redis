@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: corretto8 # Use the desired Java version
+  pre_build:
+    commands:
+      # Optionally, you might run commands before building the project
+      - echo "Executing pre-build commands..."
+  build:
+    commands:
+      - echo "Building Spring Boot application..."
+      - ./mvnw package # Use Maven or Gradle commands to build your Spring Boot app
+  post_build:
+    commands:
+      - echo "Build completed!"
+      # Optionally, you might have post-build actions like running tests, creating artifacts, etc.
+artifacts:
+  files:
+    - target/*.jar # Define the artifact(s) to be generated and uploaded
+  discard-paths: yes # Removes the file path information from the artifact(s)
